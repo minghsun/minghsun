@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>國際新聞推播</title>
+    <meta property="og:title" content="國際新聞推播">
+    <meta property="og:description" content="國際新聞推播讓你輕鬆獲得每日國際頭條！我們與國際狗語日報粉絲團合作，每天為你翻譯幾則國際新聞，用簡短的文字敘述讓你快速吸收。精選過的輕量級的內容，每天只需要花幾秒鐘就能與世界接軌。" />
+    <meta property="og:image" content="http://minghsun.li/push_news/images/appicon@2x.png">
+    <meta property="og:url" content="http://minghsun.li/push_news">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@minghsun_li">
+    <meta name="twitter:creator" content="@minghsun_li">
+    <meta name="twitter:url" content="http://minghsun.li/push_news">
+    <meta name="twitter:title" content="國際新聞推播">
+    <meta name="twitter:description" content="國際新聞推播讓你輕鬆獲得每日國際頭條！我們與國際狗語日報粉絲團合作，每天為你翻譯幾則國際新聞，用簡短的文字敘述讓你快速吸收。精選過的輕量級的內容，每天只需要花幾秒鐘就能與世界接軌。">
+    <link rel="stylesheet" href="../css/push_news.css">
+  </head>
+    <body>
+        <h1>國際新聞推播</h1>
+        <img class="appicon" src="images/appicon@2x.png" alt="app icon of push news">
+        <a href="http://itunes.apple.com/app/id995533618" title="app store download link" onClick="gaOutLink('download_pushNews')"><img class="badge" src="images/badge@2x.png" alt="app store download badge"></a>
+        <a class="link link_source" href="https://www.facebook.com/doggydailynews" onClick="gaOutLink('DoggyNews')">新聞來源：國際狗語日報</a>
+        <a class="link link_maker" href="http://minghsun.li" onClick="gaOutLink('back_to_site')">APP製作：Minghsun Li</a>
+
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-43472656-4', 'auto');
+          ga('send', 'pageview');
+
+          function gaOutLink(label){
+            gaEvent('outLink','link',label)
+          }
+        </script>
+        <script src="../js/index.js"></script>
+
+    </body>
+</html>
