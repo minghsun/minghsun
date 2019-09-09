@@ -333,7 +333,7 @@ $(function(){
 	  		$('.loading-text').text('Loading.');
 	  		$('.loading-tip').css('display','block').animate({opacity:1, color:'black'},300)
 	  		gaEvent('card','expend',detailLink);
-	  		$('.card-content').load('project_details/'+detailLink+'.html?update='+cardupdate+'&time=1909092352',function(response, status, xhr){
+	  		$('.card-content').load('project_details/'+detailLink+'.html?update='+cardupdate+'&time=20190909',function(response, status, xhr){
 	  			if(status=='error'){
 	  				$('.loading-text').text('Loading error, click to resume.');
 	  			}else{
