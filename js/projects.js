@@ -3,7 +3,7 @@ $(function(){
 	currentIndex = 0, lastIndex = 0, slideDir = 0,
 	cardWidth = $('.card').width(), totalCards = $('.card').length,
 	cardsSlider = Flipsnap('.cards-slider'),
-	colorCodes = ['#0082E3','#272C2C', '#FFB616', '#FF2121', '#FF0290', '#4E4E4E'],
+	colorCodes = ['#684DFD','#0082E3','#272C2C', '#FFB616', '#FF2121', '#FF0290', '#4E4E4E'],
 	springSystems = [], springs = [];
 	const cardWidthExpended = 600;
 	const card__expended_bottom = 100;
@@ -50,7 +50,7 @@ $(function(){
   function animateCard(el_i, val, type) {
   	var val_r = val, val_s, val_tx, val_transform='';
   	var el = document.getElementsByClassName('card')[el_i];
-  	const deg_card = 12, scl_min=.3, scl_comp=.7, card_br=4;
+  	const deg_card = 12, scl_min=.3, scl_comp=.7, card_br=16;
 
 		val_s = (1 - Math.abs(val)*scl_comp);
   	if(el_i>currentIndex){
@@ -300,6 +300,12 @@ $(function(){
   	onSpringUpdate: function(spring) {
       val_cs = rebound.MathUtil.mapValueInRange(spring.getCurrentValue(), 0, 1, 0, 1);
     	cardDisplay(val_cs)
+  	},
+  	onSpringAtRest: function(){
+  		if( $('.card__expended').css('transform') == "matrix(1, 0, 0, 1, 0, 0)"){
+	  		$('.card__expended').css('transform', '');
+	  		$('.card__expended').css('-ms-transform', '');
+  		}
   	}
   });
   spring_cs.setCurrentValue(1);
@@ -327,7 +333,7 @@ $(function(){
 	  		$('.loading-text').text('Loading.');
 	  		$('.loading-tip').css('display','block').animate({opacity:1, color:'black'},300)
 	  		gaEvent('card','expend',detailLink);
-	  		$('.card-content').load('project_details/'+detailLink+'.html?update='+cardupdate,function(response, status, xhr){
+	  		$('.card-content').load('project_details/'+detailLink+'.html?update='+cardupdate+'&time=1909092352',function(response, status, xhr){
 	  			if(status=='error'){
 	  				$('.loading-text').text('Loading error, click to resume.');
 	  			}else{
@@ -350,7 +356,7 @@ $(function(){
   	if(isCardExpended){
   		history.pushState({}, 'Projects', '#');
   		isCardExpended=false;
-	  	$('body').animate({
+	  	$('body, html').animate({
 	  		scrollTop:0
 	  	})
   		spring_cs.setEndValue(1);
@@ -396,6 +402,10 @@ $(function(){
 
 });
 
+function playVideo(){
+	document.getElementById('scVideo').play(); 
+	document.getElementById('scPlay').style.display='none';
+}
 
 function hexToRGBa(hex,alpha){
 	var patt = /^#([\da-fA-F]{2})([\da-fA-F]{2})([\da-fA-F]{2})$/;
