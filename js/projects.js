@@ -332,6 +332,8 @@ $(function(){
 	  		})
 	  		$('.loading-text').text('Loading.');
 	  		$('.loading-tip').css('display','block').animate({opacity:1, color:'black'},300)
+	  		$('.wrapper').css('filter','blur(10px)');
+	  		$('.wrapper').css('-webkit-filter','blur(10px)');
 	  		gaEvent('card','expend',detailLink);
 	  		$('.card-content').load('project_details/'+detailLink+'.html?update='+cardupdate+'&time=20190909',function(response, status, xhr){
 	  			if(status=='error'){
@@ -355,6 +357,8 @@ $(function(){
   function closeCard(){
   	if(isCardExpended){
   		history.pushState({}, 'Projects', '#');
+  		$('.wrapper').css('filter','');
+  		$('.wrapper').css('-webkit-filter','');
   		isCardExpended=false;
 	  	$('body, html').animate({
 	  		scrollTop:0
