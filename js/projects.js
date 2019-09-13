@@ -388,7 +388,7 @@ $(function(){
 
 	function init(){
 		$('.mask__loading').animate({
-			'opacity':0.
+			'opacity':0
 		},400,function(){
 			$(this).remove();
 		})
@@ -418,3 +418,18 @@ function hexToRGBa(hex,alpha){
 	return rgba
 }
 
+
+
+var svgContainer = document.getElementsByClassName('loadingAnimationContainer');
+var animItem1 = bodymovin.loadAnimation({
+wrapper: svgContainer[0],
+animType: 'svg',
+loop: true,
+path: 'images/loading.json'
+});
+var animItem2 = bodymovin.loadAnimation({
+wrapper: svgContainer[1],
+animType: 'svg',
+loop: true,
+path: 'images/loading.json'
+});
