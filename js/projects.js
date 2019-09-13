@@ -335,7 +335,7 @@ $(function(){
 	  		$('.wrapper').css('filter','blur(10px)');
 	  		$('.wrapper').css('-webkit-filter','blur(10px)');
 	  		gaEvent('card','expend',detailLink);
-	  		$('.card-content').load('project_details/'+detailLink+'.html?update='+cardupdate+'&time=20190909',function(response, status, xhr){
+	  		$('.card-content').load('project_details/'+detailLink+'.html?update='+cardupdate+'&time=20190913',function(response, status, xhr){
 	  			if(status=='error'){
 	  				$('.loading-text').text('Loading error, click to resume.');
 	  			}else{
