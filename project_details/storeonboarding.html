@@ -1,0 +1,110 @@
+<h1 class="card-title">Redesign Onboarding Experience For Yahoo Stores App</h1>
+
+<p class="project-notes">Interaction design for defining the experience, wireframes, prototypes, 2017</p>
+
+<p>Smart collection is a solution with aggreated styled products and triggers for motivating unintentional purchases.</p>
+
+
+
+<h3>Project background</h3>
+<p>Yahoo Stores App was the first app of Yahoo E-commerce platforms in Taiwan. (There are 3 E-commerce platforms in Taiwan.) And the onboarding experience wasn’t changed after it’s launched. Features and user needs might change a lot. So It was time to iterate the experience.</p>
+
+<h3>Audit of existing experience</h3>
+<p>In the first step of my process, I started to examine if there are any problems in the current onboarding experience. The problems were below:</p>
+<img class="no_bg" src="images/p/store_original_flow@2x.png" alt="The original onboarding experience">
+<p class="caption">The original onboarding experience</p>
+<ul>
+	<li>At first, the onboarding asked users to login to have personal experience. However, the personalized experience is in long term. Users won’t benefit at first few visits. And we notices that most of e-commerce platform in Taiwan don’t focus on personal experience so that users won’t know what benefit they will have. Thus, we can see the login rate was low. </li>
+	<li>There are 4 steps before user sees the home screen. Users might get impatient and hit the skip button. And there are 2 parts of onboarding. If users want to skip the onboarding, they need to hit the skip twice.</li>
+	<li>At the end of onboarding, it just end and show the home screen. It doesn't trigger the next action.</li>
+	<li>All the message of onboarding are too generic. The onboarding experience didn’t show the advantage of this platform.</li>
+</ul>
+
+
+
+<h3>Defining the new experience</h3>
+<p>Before starting to work on hands-on design explorations, the goal and value of new onboarding experience should be define. I discussed with PM and the design lead of Yahoo Stores to define to goal: The goal of onboarding for Yahoo Stores App is not to teach the users how to use the platform, but to guide users to understand and experience the core value of this platform so that users may have the next visit. And the core value of Yahoo Stores is that there are over 6000 stores in this marketplace which is the biggest B2B2C E-commerce platform in Taiwan. Users can find many stores with various categories. Therefore, we need to make users know this and engage with the stores. The core of new onboarding experience will be: Understand the value → Engage with stores → Experience the value of Yahoo Stores. Then I started to explore the flow and interactions.</p>
+
+
+<h3>Design exploration</h3>
+<p>In the early explorations, I kept the actions of selecting categories and combine it with the onboarding messages of core values to reduce steps. The stores were introduced right after user selecting preferences of categories. For each store, there are 3 most popular products of the store so that user can understand what the store is selling. Then I discuss with PMs to remove the original step 3 and 4. Step 3 and 4 was to introduce latest features. If we want to introduce any new features, there should be more guidance but not just a splash blocking the next action. And for new users, every feature is new. If we’d like the user to have the awareness of new features, there should be a more engaging way. Below are the first 2 explorations:</p>
+<img class="no_bg" src="images/p/store_design_explore01@2x.png" alt="early exploration - 1">
+<p class="caption" style="margin-top: -9px;">early exploration - 1</p>
+<img class="no_bg" src="images/p/store_design_explore02@2x.png" alt="early exploration - 2">
+<p class="caption" style="margin-top: -9px;">early exploration - 2</p>
+
+<h3>Design Iteration</h3>
+<p>As we discussed base on prototypes of the concepts, we found there could be some improvements. Reducing steps of onboarding is good. However, the information is too overwhelming. Users need to read the messages and select the categories at the same time. Therefore, I decided to make it separate and let each step has a clear mission. The first step is to communicate a clear message. And the second step is to start engage the user with the core values. Also, we found that selecting categories to have the user preferences is not very helpful. The products in Stores is categorized based on the business need. So the categories were too broad. Even if users select the categories, the recommendations after onboarding may not be relevant to users. We needed other signals for recommendations. Therefore, I proposed to remove selecting categories. Last, I did other explorations on the step 2: provide coupons and having featured stores with big brand.</p>
+<img class="no_bg" src="images/p/store_design_iteration@2x.png" alt="The 1st design iteration">
+<p class="caption" style="margin-top: -9px;">The 1st design iteration</p>
+<div style="position: relative; width: 100%; height: 408px; overflow: hidden;">
+	<video id="scVideo_iteration" loop style="
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -114px;
+		display: block;
+		width:229px;
+		height: 408px;
+		box-shadow: 0 6px 16px rgba(0,0,0,.06),  0 0 4px rgba(0,0,0,.04)">
+	    <source src="images/p/store_iteration.mp4" type="video/mp4">
+	    <img class="wretina" src="images/p/store_design_solution_prototype_fallback.png">
+	</video>
+	<a id="scPlay_iteration" style="
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -114px;
+		display: block;
+		width:229px;
+		height: 408px;
+		background-image: url(images/p/store_design_solution_prototype_play@2x.png);
+		background-size: 229px 408px;
+		cursor: pointer;
+		z-index: 2;" onclick="document.getElementById('scVideo_iteration').play(); 
+	document.getElementById('scPlay_iteration').style.display='none';"></a>
+</div>
+
+
+<p class="caption">Prototype of the 1st design iteration</p>
+<p>With the more concrete design and prototype, I shared my design in our internal design review with all Yahoo APAC designers to get feedback from other perspectives. The major feedback was on the store cards. To maintain the content density, the store cards were small. The pictures of the stores and products isn’t clear enough to trigger the user. So I stepped back to examine what information should be presented. And at that time, there were more and more big or famous brands joining Yahoo Stores. The awarenesses of these big brands are so strong that we don’t even need to show the product images. Showing these big-brand images might even be better. In the feedback from Google Play and App Store, many users were surprised to see some of the big brands they didn't expect. Besides of the design feedback, there are also some technical and business constraints. With these input, I iterate the design to the final solution.</p>
+
+
+<h3>The Solution</h3>
+<p>In the final solution, there are two major onboarding steps. The first step is to introduce the core value of Yahoo Stores: there are more than 6,000 stores with various promotion and coupons in the platform. The second step is provide curated store recommendations to let the user know there are famous official brands and stores among the 6,000 stores in this platform. This builds the trust and make users start to have the intention of engaging with Yahoo Store. The recommended stores are divided in to 13 categories so that users can skip uninterested categories easily with vertically scroll and browse interested categories with horizontally scroll. Users can add these store to their favorite stores list so that they can stay up to date with these stores’ latest activities, promotions an coupons. When users end the onboarding steps, there will be a popover in the home screen to indicate that all the users’ favorite stores are in the second tab. And users can start to browse the feed from their favorite stores.</p>
+<img class="no_bg" src="images/p/store_design_solution@2x.png" alt="Final design solution">
+<p class="caption" style="margin-top: -15px;">Final design solution</p>
+<div style="position: relative; width: 100%; height: 612px; overflow: hidden;">
+	<img class="no_bg" style="position: absolute;
+	top:0;
+	left: 50%;
+	width:672px;
+	margin-left: -336px;
+	margin-top: 0;" src="images/p/store_design_solution_prototype@2x.png" alt="Final design solution">	
+	<video id="scVideo" loop style="
+		width:229px;
+		display: block;
+		position: absolute;
+		left: 50%;
+		top: 84px;
+		margin-left: -114px;">
+	    <source src="images/p/store_design_solution_prototype.mp4" type="video/mp4">
+	    <img class="wretina" src="images/p/store_design_solution_prototype_fallback.png">
+	</video>
+	<a id="scPlay" style="
+		position: absolute;
+		top: 84px;
+		left: 50%;
+		margin-top: 0;
+		margin-left: -114px;
+		display: block;
+		width:229px;
+		height: 408px;
+		background-image: url(images/p/store_design_solution_prototype_play@2x.png);
+		background-size: 229px 408px;
+		cursor: pointer;
+		z-index: 2;" onclick="playVideo()"></a>
+</div>
+
+<p class="caption">Prototype of the final design solution</p>
+<p>After this new onboarding experience was release, we could see positive results from our internal data. Most of the users add stores to favorite and return to Yahoo Store to browser and shop in their favorite stores. And this was just the first step of improving shopping experience. We done some iterations based on the date after release. Also, We leverage the information gathered from onboarding to personalize the shopping experience of Yahoo Stores.</p>

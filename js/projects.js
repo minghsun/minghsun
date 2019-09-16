@@ -3,7 +3,7 @@ $(function(){
 	currentIndex = 0, lastIndex = 0, slideDir = 0,
 	cardWidth = $('.card').width(), totalCards = $('.card').length,
 	cardsSlider = Flipsnap('.cards-slider'),
-	colorCodes = ['#684DFD','#0082E3','#272C2C', '#FFB616', '#FF2121', '#FF0290', '#4E4E4E'],
+	colorCodes = ['#684DFD', '#00b3ff', '#0082E3','#272C2C', '#FFB616', '#FF2121', '#FF0290',],
 	springSystems = [], springs = [];
 	const cardWidthExpended = 600;
 	const card__expended_bottom = 100;
@@ -335,7 +335,7 @@ $(function(){
 	  		$('.wrapper').css('filter','blur(10px)');
 	  		$('.wrapper').css('-webkit-filter','blur(10px)');
 	  		gaEvent('card','expend',detailLink);
-	  		$('.card-content').load('project_details/'+detailLink+'.html?update='+cardupdate+'&time=20190913',function(response, status, xhr){
+	  		$('.card-content').load('project_details/'+detailLink+'.html?update='+cardupdate+'&time=20190916',function(response, status, xhr){
 	  			if(status=='error'){
 	  				$('.loading-text').text('Loading error, click to resume.');
 	  			}else{
@@ -409,6 +409,7 @@ $(function(){
 function playVideo(){
 	document.getElementById('scVideo').play(); 
 	document.getElementById('scPlay').style.display='none';
+	
 }
 
 function hexToRGBa(hex,alpha){
