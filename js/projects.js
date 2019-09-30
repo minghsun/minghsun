@@ -330,7 +330,7 @@ $(function(){
 	  		},function(){
 	  			$(this).removeClass('hidden')
 	  		})
-	  		$('.loading-text').text('Loading.');
+	  		$('.loading-text').text('Loading...');
 	  		$('.loading-tip').css('display','block').animate({opacity:1, color:'black'},300)
 	  		$('.wrapper').css('filter','blur(10px)');
 	  		$('.wrapper').css('-webkit-filter','blur(10px)');
