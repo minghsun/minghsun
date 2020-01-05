@@ -344,7 +344,7 @@ $(function(){
 	  					$('.loading-tip').css('display','none')
 	  					$('.loading-text').text('')
 	  				});
-	  				$('.card-hero__expended').attr('src',$('.card-hero').eq(cardIndex).attr('src'))
+	  				$('.card-hero__expended').attr('src','images/p/'+detailLink+'_cover@2x.jpg')
 			  		$('.card__expended').css('display','block');
 			  		// $('.card__expended').css('opacity',1);
 			  		spring_cs.setEndValue(0);
